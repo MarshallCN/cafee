@@ -1,0 +1,27 @@
+.fat{
+  font-size: 120%;
+  font-weight: bold;
+}
+#body{   
+margin-top: 40px;
+}
+#tab{
+	position:relative;
+	height: 50px;
+	width:100%;
+	margin-top: -10px;
+}
+#tab_in{
+		position:relative; 
+		padding-top:20px;
+        padding-bottom: 20px;
+}
+#ti{
+	margin-top: 10px;
+	margin-left: 10px;
+}
+#cusid{
+	position: absolute;
+	margin-left: calc(52.1%);
+	z-index:1;
+}
