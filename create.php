@@ -34,7 +34,7 @@
 	            if(!empty($_POST[$f_id])) {
 				    echo "<tr><td>".$food_cata_info['cata'][$f_id]."</td>";
 	                echo "<td>".$food_cata_info['name'][$f_id]."</td>";
-				    echo "<td>￥".$food_cata_info['price'][$f_id]."</td>";
+				    echo "<td>&#165;".$food_cata_info['price'][$f_id]."</td>";
                     echo "<td>".$f_quantity."</td></tr>";
 				    $create_res['food_id'][$itemcount] =$f_id;
                     $create_res['quantity'][$itemcount]= $f_quantity;				
@@ -48,7 +48,7 @@
 				$result = $mysql->query($sql_cusinfo);  
                 $row = $mysql->fetch($result);
 				}
-		        echo "<tr><td colspan='2' class='bold'>Total Price</td><td colspan='2' class='text-centered'>￥  ".$totalp."</td></tr>";
+		        echo "<tr><td colspan='2' class='bold'>Total Price</td><td colspan='2' class='text-centered'>&#165;  ".$totalp."</td></tr>";
 		        echo "<tr><td colspan='1' class='bold'>Customer ID</td><td colspan='3'>".$row[0]."</td></tr>";
 	          	echo "<tr><td colspan='1' class='bold'>Customer Name</td><td colspan='3'>".$row[1]." ".$row[2]."</td></tr>";
 	         	echo "<tr><td colspan='1' class='bold'>Phone Number</td><td colspan='3'>".$row[3]."</td></tr>";

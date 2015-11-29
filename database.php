@@ -50,7 +50,7 @@
             echo "<tr>";
             echo "<td>".($row['food_id']-10)."</td>";
             echo "<td>".$row['food_name']." </td>";
-			echo "<td>￥".$row['price']." </td>";
+			echo "<td>&#165;".$row['price']." </td>";
 			echo "<td>".$row['cata_name']." </td>";
 	        echo "</tr>";
         }
@@ -68,7 +68,7 @@
             echo "<td>".$row['Order_id']." </td>";
 			echo "<td>".$row['customer_id']." </td>";
 			echo "<td>".$row['fname']." ".$row['lname']." </td>";
-			echo "<td>￥".$row['Order_Price']." </td>";
+			echo "<td>&#165;".$row['Order_Price']." </td>";
 			echo "<td>".$row['Date']." </td>";
 			echo "<td>".$row['Time']." </td>";
 			echo "<td><a href='test.php'><samp>o</samp></a><a href='test.php'><kbd>x</kbd></a></td>";
@@ -113,7 +113,7 @@
 			while($row_finfo = $mysql->fetch($result_finfo)) {
 				echo "<tr>";
      			echo "<td>".$row_finfo['food_name']."</td>";
-			    echo "<td>￥".$row_finfo['price']." </td>";   
+			    echo "<td>&#165;".$row_finfo['price']." </td>";   
                 $foodid = $row_finfo['food_id'];
                 $sql_fquantity = "SELECT sum(quantity)as Quantity from order_food where food_id = ".$foodid.";";
 				$result_fquantity = $mysql->query($sql_fquantity); 
@@ -140,7 +140,7 @@
                 echo "<tr>";
                 echo "<td>".$row_finfo['food_id']."</td>";
                 echo "<td>".$row_finfo['food_name']." </td>";
-			    echo "<td>￥".$row_finfo['price']." </td>";
+			    echo "<td>&#165;".$row_finfo['price']." </td>";
 			    echo "<td><input type='number' name='".$row_finfo['food_id']."' min = '0' max = '999'/></td>" ;
 	            echo "</tr>";
             }
@@ -164,7 +164,7 @@
 			echo "<td>".$row['Tel']."</td>";
 			echo "<td>".$row['Birthdate']."</td>";
 			echo "<td>".$row['Address']."</td>";
-			echo "<td>￥".$row['credit']."</td>";
+			echo "<td>&#165;".$row['credit']."</td>";
 			echo "</tr>";
 	    }
 		echo "</table>";
