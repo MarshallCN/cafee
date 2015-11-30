@@ -6,8 +6,7 @@
         <link type="text/css" rel="stylesheet" href="css/kube.css"/>
     </head>
     <body>
-	    <h1 id="ti" class='title'>Laowai Cafe</h1>
-	    <center>
+	    <center class="navbar-fixed">
 	    <div id="tab">
             <form method="get" action="index.php"> 
             <table class="table-stripped">
