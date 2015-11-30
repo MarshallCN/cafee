@@ -1,26 +1,33 @@
-.fat{
-  font-size: 120%;
-  font-weight: bold;
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  	position: fixed;
+    width: 100%;
 }
-#body{   
-margin-top: 40px;
+
+#body {   
+	margin-top: 100px;
 }
-#tab{
+
+.fat {
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#tab {
 	position:relative;
 	height: 50px;
 	width:100%;
 	margin-top: -10px;
 }
-#tab_in{
-		position:relative; 
-		padding-top:20px;
-        padding-bottom: 20px;
+
+#tab_in {
+	position:relative; 
+	padding-top:20px;
+	padding-bottom: 20px;
 }
-#ti{
-	margin-top: 10px;
-	margin-left: 10px;
-}
-#cusid{
+
+#cusid {
 	position: absolute;
 	margin-left: calc(52.1%);
 	z-index:1;
