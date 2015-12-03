@@ -9,10 +9,9 @@
         <row centered>
         <column cols="6">
         <?php
-            require_once "database.php";
+            require_once "db.php";
             error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
             session_start();
-            $mysql= new MySQL();
             $sql_foodinfo = "select s.food_id,s.cata_name as food_name,s.price,p.cata_name from food_catalogue as s join food_catalogue as p where p.food_id = s.catalog_id and  s.food_id != s.catalog_id;";
             $result = $mysql->query($sql_foodinfo);
             $food_cata_info = array();
