@@ -1,13 +1,11 @@
 .navbar-fixed {
     top: 0;
     z-index: 100;
-  	position: fixed;
-    width: 100%;.fat{
-  font-size: 120%;
-  font-weight: bold;
+    position: fixed;
+    width: 100%;
 }
 #body{   
-margin-top: 40px;
+        margin-top: 40px;
 }
 .fat {
 	font-size: 120%;
