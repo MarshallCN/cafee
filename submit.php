@@ -9,9 +9,8 @@
         <row centered>
         <column cols="6">
         <?php
-		    require "database.php";
+		    require "db.php";
             session_start();	
-            $mysql= new MySQL(); 
             if(isset($_SESSION['totalp'])){
                 $totalp = $_SESSION['totalp'];
 	            $create_res = $_SESSION['cres'];
