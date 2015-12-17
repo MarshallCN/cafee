@@ -1,17 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laowai Cafe</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css"/>
-        <link type="text/css" rel="stylesheet" href="css/kube.css"/>
-    </head>
-    <body><br/>
-        <row centered>
-        <column cols="6">
-        <?php
+		<?php
             require_once "db.php";
-            error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
-            session_start();
+           error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
             $sql_foodinfo = "select s.food_id,s.cata_name as food_name,s.price,p.cata_name from food_catalogue as s join food_catalogue as p where p.food_id = s.catalog_id and  s.food_id != s.catalog_id;";
             $result = $mysql->query($sql_foodinfo);
             $food_cata_info = array();
@@ -61,13 +50,9 @@
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];
             }else{
-				header("refresh:1;url='index.php?order_new='");
+				//header("refresh:1;url='index.php?order_new='");
                 echo "<div class='forms'><fieldset class='alert alert-error'><legend class='fat'>You Ordered Nothing</legend>";
-				echo "<p>Back to Home Page in 1 seconds...</p>";
-                echo "<a href='index.php'>Back to Homepage immdiately</a></fieldset></div>";
+				//echo "<p>Back to Home Page in 1 seconds...</p>";
+                //echo "<a href='index.php'>Back to Homepage immdiately</a></fieldset></div>";
 		    }	
         ?>
-        </column>
-        </row>
-    </body>
-</html>
