@@ -21,6 +21,27 @@
 		    </table>
 	    </div>
 		</center>
+		<div class='left'>
+			<div class='left_tab'>
+				<a href=#tab>TOP</a><br/>
+				<?php
+				if ($page == 'create_order' || $page == 'food_sold') {
+					echo "<a href=#Sandwiches>Sandwiches</a><br/>";
+					echo "<a href=#Salads>Salads</a><br/>";
+					echo "<a href=#Eggs>Eggs</a> <br/>";
+					echo "<a href=#BREAKFAST>Breakfast</a><br/>";
+					echo "<a href=#Patisserie>Patisserie</a><br/>";
+					echo "<a href=#COFFEE>COFFEE</a><br/>";
+					echo "<a href=#HotChocolate>HotChocolate</a><br/>";
+					echo "<a href=#Tea>Tea</a><br/>";
+					echo "<a href=#Beverage>Beverage</a><br/>";
+					echo "<a href=#Milkshakes>Milkshakes</a><br/>";
+					echo "<a href=#Special>Special</a><br/>";
+				}
+				 ?>
+				<a href=#buttom>Buttom</a><br/>
+			</div>
+		</div>
 	    <div id='body'>
-            <row centered>
-                <column cols="9">		
+            <row>
+                <column cols="10">		
