@@ -1,6 +1,7 @@
 <div class='create_order'>
 <?php
-$sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = catalog_id;";
+	error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
+	$sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = catalog_id;";
 		$result_fcata = $mysql->query($sql_fcata);
 ?>
 		<form action='index.php?page=create_order' method ='post'>
@@ -34,5 +35,10 @@ $sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = ca
 			</div>
 		</form></blocks>
 </div>
-<div class='create_page'><?php include 'create.php';?></div>	
+<div class='create_page'>
+	<?php
+		include 'create_order_page.php';
+	?>
+</div>
+
 

@@ -1,11 +1,11 @@
 <?php
 require("db.php");
-include("header.php");
 if (isset($_GET['page'])) {
 	$page = $_GET['page'];
 } else {
 	$page = 'default';
 }
+include("header.php");
 if ($page == 'default') {
 	include ("food_sold.php");
 } else if ($page == 'food_cata') {

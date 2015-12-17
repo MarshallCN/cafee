@@ -1,6 +1,4 @@
 		<?php
-            require_once "db.php";
-           error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
             $sql_foodinfo = "select s.food_id,s.cata_name as food_name,s.price,p.cata_name from food_catalogue as s join food_catalogue as p where p.food_id = s.catalog_id and  s.food_id != s.catalog_id;";
             $result = $mysql->query($sql_foodinfo);
             $food_cata_info = array();
@@ -32,9 +30,12 @@
             }
 		    if ($totalp > 0) {
 	            if(!empty(preg_replace("/\s/","",(int)$_POST['cus_id']))){
-			    $sql_cusinfo = "SELECT customer_id,firstname,lastname,tel,address from customer_info where customer_id = '".preg_replace("/\s/","",(string)$_POST['cus_id'])."';";
-				$result = $mysql->query($sql_cusinfo);  
-                $row = $mysql->fetch($result);
+					$sql_cusinfo = "SELECT customer_id,firstname,lastname,tel,address from customer_info where customer_id = '".preg_replace("/\s/","",(string)$_POST['cus_id'])."';";
+					$result = $mysql->query($sql_cusinfo);  
+					$row = $mysql->fetch($result);
+					if(empty($row[0])){
+						$row[0]= preg_replace("/\s/","",(string)$_POST['cus_id']);
+					}
 				}
 		        echo "<tr><td colspan='2' class='bold'>Total Price</td><td colspan='2' class='text-centered'>&#165;  ".$totalp."</td></tr>";
 		        echo "<tr><td colspan='1' class='bold'>Customer ID</td><td colspan='3'>".$row[0]."</td></tr>";
@@ -46,13 +47,14 @@
                 echo "<link href='' rel='stylesheet' media='all' />";
                 echo "<link href='' rel='stylesheet' media='print'/>";
 	         	echo "<div class='text-right'><button class='submit' type='primary' name='submit'>Submit</button></div></blocks></form>";
-		        $_SESSION['totalp'] = $totalp;
+		        session_start();
+				$_SESSION['totalp'] = $totalp;
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];
             }else{
 				//header("refresh:1;url='index.php?order_new='");
-                echo "<div class='forms'><fieldset class='alert alert-error'><legend class='fat'>You Ordered Nothing</legend>";
+                echo "<div class='forms'><fieldset class='alert alert-error'><legend class='fat'>You Ordered Nothing</legend></fieldset></div>";
 				//echo "<p>Back to Home Page in 1 seconds...</p>";
-                //echo "<a href='index.php'>Back to Homepage immdiately</a></fieldset></div>";
+                //echo "<a href='index.php'>Back to Homepage immdiately</a>";
 		    }	
-        ?>
+        ?>	

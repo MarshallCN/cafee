@@ -6,6 +6,7 @@
 }
 #body{   
         margin-top: 40px;
+		display: block;
 }
 .fat {
 	font-size: 120%;
@@ -26,8 +27,25 @@
 	margin-top: 10px;
 	margin-left: 10px;
 }
-#cusid{
-	position: absolute;
-	margin-left: calc(52.1%);
-	z-index:1;
+.left{
+	height: 100%;
+	width: 10%;
+	float: left;
+	position: relative;
+}
+.left_tab{
+	position: fixed;
+	background: rgba(0,0,0,0.15);
+	border-radius: 2px;
+	margin-top: 8%;
+	margin-left: 3%;
+	
+}
+.create_order{
+	float:left;
+	width: 45%;
+}
+.create_page{
+	width: 50%;
+	float:right;
 }

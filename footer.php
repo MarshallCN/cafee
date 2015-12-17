@@ -2,5 +2,5 @@
             </row>
 		</div>
     </body>
-	<footer id='buttom'><footer>
+	<div id='bottom'></div>
 </html>

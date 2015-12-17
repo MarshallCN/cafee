@@ -11,7 +11,7 @@
 </form>
 <?php
 $all = '';
-$today ="where o.date =(select current_date)";
+$today ="where date =(select current_date)";
 $in7day = "where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date";
 $thismonth = "where month(date) = month(now())";
 $thisweek = "where week(date,1) = week(now())";

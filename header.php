@@ -25,7 +25,7 @@
 			<div class='left_tab'>
 				<a href=#tab>TOP</a><br/>
 				<?php
-				if ($page == 'create_order' || $page == 'food_sold') {
+				 if ($page == 'create_order'|| $page == 'food_sold') {
 					echo "<a href=#Sandwiches>Sandwiches</a><br/>";
 					echo "<a href=#Salads>Salads</a><br/>";
 					echo "<a href=#Eggs>Eggs</a> <br/>";
@@ -37,11 +37,17 @@
 					echo "<a href=#Beverage>Beverage</a><br/>";
 					echo "<a href=#Milkshakes>Milkshakes</a><br/>";
 					echo "<a href=#Special>Special</a><br/>";
+					if ($page == 'create_order'){
+						echo "<a href=#creare_order>Bottom</a><br/>";
+					}else{
+						echo "<a href=#bottom>Bottom</a><br/>";
+					}
+				}else{
+					echo "<a href=#bottom>Bottom</a><br/>";
 				}
 				 ?>
-				<a href=#buttom>Buttom</a><br/>
 			</div>
 		</div>
 	    <div id='body'>
             <row>
-                <column cols="10">		
+                <column cols="11">		

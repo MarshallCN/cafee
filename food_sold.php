@@ -4,9 +4,9 @@ $sql_fcata = "select catalog_id,cata_name from food_catalogue where price IS NUL
 		echo "<table class ='table-stripped'>"; 
 		while($row_fcata = $mysql->fetch($result_fcata)) {
 			$cata_id = $row_fcata['catalog_id'];	
-            $sql_finfo = "select food_id,s.cata_name as food_name,s.price from food_catalogue as s where S.catalog_id = ".$cata_id." and s.price IS NOT NULL;";
+            $sql_finfo = "select food_id,s.cata_name as food_name,s.price from food_catalogue as s where s.catalog_id = ".$cata_id." and s.price IS NOT NULL;";
 	        $result_finfo = $mysql->query($sql_finfo); 
-            echo "<th colspan='4'>".$row_fcata['cata_name']."</th>";
+            echo "<th colspan='4' id=".$row_fcata['cata_name'].">".$row_fcata['cata_name']."</th>";
             echo "<tr><td class='bold'>Food Name</td><td class='bold'>Price</td><td class='bold'>Quantity</td></tr>";
 			while($row_finfo = $mysql->fetch($result_finfo)) {
 				echo "<tr>";
