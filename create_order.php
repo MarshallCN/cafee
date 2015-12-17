@@ -1,14 +1,14 @@
+<div class='create_order'>
 <?php
 $sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = catalog_id;";
 		$result_fcata = $mysql->query($sql_fcata);
-		echo "<form action='create.php' method ='post'>";
-		echo "<a href=#Sandwiches>Sandwiches</a> ";
-		echo "<a href=#Salads>Salads</a>  ";
-		echo "<a href=#Eggs>Eggs</a>  ";
-		echo "<a href=#BREAKFAST>Breakfast</a>  ";
-		echo "<a href=#Patisserie>Patisserie</a>  ";
-		echo "<div id='cusid' class='bold'>Customer ID: <input type='text' name='cus_id' maxlength='6' placeholder='Less than 6 numbers'/></div>";
-		echo "<table class ='table-stripped'>"; 
+?>
+		<form action='index.php?page=create_order' method ='post'>
+			<div id='cusid' class='bold'>
+				Customer ID: <input type='text' name='cus_id' maxlength='6' placeholder='Less than 6 numbers' required/>
+			</div>
+			<table class ='table-stripped'>
+	<?php
 		while($row_fcata = $mysql->fetch($result_fcata)) {
 			$cata_id = $row_fcata['catalog_id']; 
 	        $sql_finfo = "select s.food_id,s.cata_name as food_name,s.price,s.catalog_id from food_catalogue as s join food_catalogue as p where p.food_id = s.catalog_id and s.price IS NOT NULL and s.catalog_id = ".$cata_id.";"; 
@@ -24,6 +24,15 @@ $sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = ca
 	            echo "</tr>";
             }
 		}
-		echo "</table><br/><blocks cols='2'><div><button type='reset' outline>Reset</button></div>";
-		echo "<div class='text-right'><button type='primary' name='create'>Create</button></div></form></blocks>";	
-?>
+	?>
+			</table><br/><blocks cols='2'>
+			<div>
+				<button type='reset' outline>Reset</button>
+			</div>
+			<div class='text-right'>
+				<button id='creare_order' type='primary' name='create'>Create</button>
+			</div>
+		</form></blocks>
+</div>
+<div class='create_page'><?php include 'create.php';?></div>	
+
