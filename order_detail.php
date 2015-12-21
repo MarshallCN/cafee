@@ -16,8 +16,15 @@ $sql = "SELECT Item_id,F.order_id,cus.lastname as lname,Cs.cata_name as Food_nam
 			echo "<td>".$row['Quantity']." </td>";
 			echo "<td>&#165;".$row['Single_Price']." </td>";
 			echo "<td>&#165;".$row['Total_Price']." </td>";
-			echo "<td><a href='test.php'><samp>o</samp></a><a href='test.php'><kbd>x</kbd></a></td>";
-	        echo "</tr>";
-        }
-        echo "</table>";
-?>
+		?>
+		<td>
+			<a href='test.php' onclick="confirm('Do you want to edit this record?');">
+				<samp>o</samp>
+			</a>
+			<a href='test.php' onclick="confirm('Delete this Record forever?');confirm('Are you sure?');">
+				<kbd>x</kbd>
+			</a>
+		</td>";
+	</tr>
+    <?php } ?>
+</table>
