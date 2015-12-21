@@ -24,7 +24,7 @@ $sql = "SELECT Item_id,F.order_id,cus.lastname as lname,Cs.cata_name as Food_nam
 			<a href='test.php' onclick="confirm('Delete this Record forever?');confirm('Are you sure?');">
 				<kbd>x</kbd>
 			</a>
-		</td>";
+		</td>
 	</tr>
     <?php } ?>
 </table>
