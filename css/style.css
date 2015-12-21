@@ -5,8 +5,9 @@
     width: 100%;
 }
 #body{   
-        margin-top: 40px;
-		display: block;
+    margin-top: 40px;
+	display: block;
+	margin-right: 30px;
 }
 .fat {
 	font-size: 120%;
@@ -43,9 +44,26 @@
 }
 .create_order{
 	float:left;
-	width: 45%;
+	width: 55%;
 }
-.create_page{
-	width: 50%;
+#create_page{
+	width: 43%;
 	float:right;
+	margin-right: 1%;
+	margin-top: 2%;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0; 
+}
+input[type="number"]{-moz-appearance:textfield;}
+#cus{
+	height: 50px;
+	width: 30%;
+}
+.bnum{
+	font-size: 26px;
+	font-family:Georgia,Times;
+}
+

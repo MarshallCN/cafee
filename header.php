@@ -50,4 +50,4 @@
 		</div>
 	    <div id='body'>
             <row>
-                <column cols="11">		
+                <column cols="12">		

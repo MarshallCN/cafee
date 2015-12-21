@@ -14,9 +14,11 @@ $sql = "select Order_id,o.customer_id,firstname as fname,lastname as lname,Order
 			echo "<td>&#165;".$row['Order_Price']." </td>";
 			echo "<td>".$row['Date']." </td>";
 			echo "<td>".$row['Time']." </td>";
-			echo "<td><a href='test.php'><samp>o</samp></a><a href='test.php'><kbd>x</kbd></a></td>";
-	        echo "</tr>";
-			
-        }
-        echo "</table>";
 ?>
+		<td>
+			<a onclick="confirm('Do you want to edit this record?');"><samp>o</samp></a>
+			<a onclick="confirm('Delete this Record forever?');confirm('Are you sure?');"><kbd>x</kbd></a>
+		</td>
+	</tr>
+<?php } ?> 
+</table>

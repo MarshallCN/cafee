@@ -16,8 +16,8 @@
 		    $totalp = 0;	
 		    $itemcount = 0;
 		    for ($f_id=11;$f_id<$totalid;$f_id++) {
-				$f_quantity = $_POST[$f_id];
-	            if(!empty($_POST[$f_id])) {
+				$f_quantity = (int)$_POST[$f_id];
+	            if(!empty($f_quantity)) {
 				    echo "<tr><td>".$food_cata_info['cata'][$f_id]."</td>";
 	                echo "<td>".$food_cata_info['name'][$f_id]."</td>";
 				    echo "<td>&#165;".$food_cata_info['price'][$f_id]."</td>";
@@ -42,12 +42,33 @@
 	          	echo "<tr><td colspan='1' class='bold'>Customer Name</td><td colspan='3'>".$row[1]." ".$row[2]."</td></tr>";
 	         	echo "<tr><td colspan='1' class='bold'>Phone Number</td><td colspan='3'>".$row[3]."</td></tr>";
 	         	echo "<tr><td colspan='1' class='bold'>Address</td><td colspan='3'>".$row[4]."</td></tr></table>";
-	          	echo "<blocks cols='3'><div><button type='button' outline name='back' onclick =\"javascript: history.back(-1);\">Back</button></div>";
-	          	echo "<div class='text-centered'><button type='button' onclick='window.print()'>Print</button></div>";
-                echo "<link href='' rel='stylesheet' media='all' />";
-                echo "<link href='' rel='stylesheet' media='print'/>";
-	         	echo "<div class='text-right'><button class='submit' type='primary' name='submit'>Submit</button></div></blocks></form>";
-		        session_start();
+	          	?>
+				<blocks cols='3'>
+				<div>
+					<button type='button' outline name='back' onclick =\"javascript: history.back(-1);\">Back</button>
+				</div>
+				<script language="javascript"> 
+					function printdiv(printpage) { 
+						var headstr = "<html><head><title></title></head><body>"; 
+						var footstr = "</body>"; 
+						var newstr = document.all.item(printpage).innerHTML; 
+						var oldstr = document.body.innerHTML; 
+						document.body.innerHTML = headstr+newstr+footstr; 
+						window.print(); 
+						document.body.innerHTML = oldstr; 
+						return false; 
+					} 
+				</script> <!--<link href='' rel='stylesheet' media='all' />
+					<link href='' rel='stylesheet' media='print'/>-->
+	          	<div class='text-centered'>
+					<button type='button' onclick="printdiv('create_page');">Print</button>
+				</div>
+	         	<div class='text-right'>
+					<button class='submit' type='primary' name='submit'>Submit</button>
+				</div>
+				</blocks></form>
+		    <?php
+				session_start();
 				$_SESSION['totalp'] = $totalp;
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];
