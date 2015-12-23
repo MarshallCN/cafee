@@ -12,15 +12,12 @@
 		    require "db.php";
             session_start();	
             if(isset($_SESSION['totalp'])){
-                $totalp = $_SESSION['totalp'];
 	            $create_res = $_SESSION['cres'];
 	            $cus_id = $_SESSION['cus_id'];
                 $itemnum = count($create_res['food_id']);
-                $sql_inserto = 'INSERT orders(order_price,customer_id,date,time) VALUE('.$totalp.',"'.$cus_id.'",curdate(),curtime());';
+                $sql_inserto = "INSERT orders(customer_id,date,time) VALUE($cus_id,curdate(),curtime())";
                 $mysql->query($sql_inserto);
 				$order_id = mysql_insert_id();
-	            $sql_upcredit = "UPDATE customer_info SET credit = (select sum(order_price) from orders where customer_id= '$cus_id') where customer_id= '$cus_id';";
-	            $mysql->query($sql_upcredit);
                 for ($itemcount=0;$itemcount<$itemnum;$itemcount++) {
                     $sql_insertf = "INSERT order_food(order_id,food_id,quantity) VALUE(".$order_id.",".$create_res['food_id'][$itemcount].",".$create_res['quantity'][$itemcount].")";
                     $mysql->query($sql_insertf);
