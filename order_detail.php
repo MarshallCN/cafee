@@ -17,9 +17,17 @@ $sql = "SELECT Item_id,F.order_id,cus.lastname as lname,Cs.cata_name as Food_nam
 			echo "<td>&#165;".$row['Single_Price']." </td>";
 			echo "<td>&#165;".$row['Total_Price']." </td>";
 		?>
+<script>
+function firm(text,url) {  
+       if (confirm(text)) {
+			alert('Delete OK');		   
+			window.open(url);
+         }  
+    }  
+</script>
 		<td>
-			<a href='test.php' onclick="confirm('Do you want to edit this record?');"><samp>o</samp></a>
-			<a href='test.php' onclick="confirm('Delete this Record forever?');confirm('Are you sure?');"><kbd>x</kbd></a>
+			<a href="" onclick="confirm('Do you want to Edit this?')"><samp>o</samp></a>
+			<a onclick="firm('Do you want to delete this record?','sql.php?sql=delete from order_food where item_id ='+<?php echo $row['Item_id'];?>);"><kbd>x</kbd></a>
 		</td>
 	</tr>
     <?php } ?>

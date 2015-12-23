@@ -15,9 +15,17 @@ $sql = "select Order_id,o.customer_id,firstname as fname,lastname as lname,Order
 			echo "<td>".$row['Date']." </td>";
 			echo "<td>".$row['Time']." </td>";
 ?>
+<script>
+function firm(text,url) {  
+       if (confirm(text)) {
+			alert('Delete OK');		   
+			window.open(url);
+         }  
+    }  
+</script>
 		<td>
-			<a onclick="confirm('Do you want to edit this record?');"><samp>o</samp></a>
-			<a onclick="confirm('Delete this Record forever?');confirm('Are you sure?');"><kbd>x</kbd></a>
+			<a href="" onclick="confirm('Do you want to Edit this?')"><samp>o</samp></a>
+			<a onclick="firm('Do you want to delete this order and its detail information?','sql.php?sql=delete from orders where order_id ='+<?php echo $row['Order_id'];?>);"><kbd>x</kbd></a>
 		</td>
 	</tr>
 <?php } ?> 

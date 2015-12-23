@@ -4,8 +4,8 @@
     position: fixed;
     width: 100%;
 }
-#body{   
-    margin-top: 40px;
+.body{   
+    margin-top: 50px;
 	display: block;
 	margin-right: 30px;
 }
@@ -13,16 +13,21 @@
 	font-size: 120%;
 	font-weight: bold;
 }
-#tab{
+#tab_out{
 	position:relative;
-	height: 50px;
+	height: 30px;
 	width:100%;
 	margin-top: -10px;
 }
-#tab_in{
+.tab{
+	position: fixed;
+	z-index: 1;
+	width:100%;
+}
+.tab_in{
 		position:relative; 
 		padding-top:20px;
-        padding-bottom: 20px;
+        padding-bottom: 5px;
 }
 #ti{
 	margin-top: 10px;
@@ -36,21 +41,30 @@
 }
 .left_tab{
 	position: fixed;
-	background: rgba(0,0,0,0.15);
+	background: rgba(0,0,0,0.05);
 	border-radius: 2px;
 	margin-top: 8%;
-	margin-left: 3%;
-	
+	margin-left: 1%;
+	text-align: center;
+}
+.left_tab a{
+	text-decoration: none;
+	font-size: 1.2em;
+}
+.left_tab img{
+	width: 80px;
+	height: 40px;
 }
 .create_order{
 	float:left;
 	width: 55%;
 }
 #create_page{
-	width: 43%;
+	width: 40%;
 	float:right;
-	margin-right: 1%;
-	margin-top: 2%;
+	margin-left: 50%;
+	margin-top: -30px;
+	position: fixed;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -60,10 +74,63 @@ input::-webkit-inner-spin-button{
 input[type="number"]{-moz-appearance:textfield;}
 #cus{
 	height: 50px;
-	width: 30%;
+	width: 20%;
 }
 .bnum{
 	font-size: 26px;
 	font-family:Georgia,Times;
 }
-
+/*DROPDOWN MENU*/
+nav {
+    margin: -50px 400px;
+	padding-bottom: 40px;
+	width: 15%;
+}
+ 
+nav ul ul {
+    display: none;
+}
+    nav ul li:hover > ul {
+        display: block;
+    }
+nav ul {
+    background:#2f77d1; 
+    padding: 0 20px;
+    border-radius: 10px;  
+    list-style: none;
+    position: relative;
+    display: inline-table;
+}
+    nav ul:after {
+        content: ""; clear: both; display: block;
+    }
+ 
+    nav ul li {
+        float: left;
+    }
+        nav ul li:hover {
+            background: #2f77ee;
+        }
+            nav ul li:hover a {
+                color: #fff;
+            }
+        nav ul li a {
+            display: block; padding: 15px 20px;
+            color: #fff; text-decoration: none;
+        }      
+    nav ul ul {
+        background: #5f6975; border-radius: 0px; padding: 0;
+        position: absolute; top: 100%;
+    }
+        nav ul ul li {
+            float: none; 
+            border-top: 1px solid #6b727c;
+            border-bottom: 1px solid #5992da; position: relative;
+        }
+            nav ul ul li a {
+                padding: 10px 20px;
+                color: #fff;
+            }   
+                nav ul ul li a:hover {
+                    background: #2f77ff;
+                }

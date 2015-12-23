@@ -45,7 +45,7 @@
 	          	?>
 				<blocks cols='3'>
 				<div>
-					<button type='button' outline name='back' onclick =\"javascript: history.back(-1);\">Back</button>
+					<button type='button' outline name='back' onclick ="javascript: history.back(-1);">Modify</button>
 				</div>
 				<script language="javascript"> 
 					function printdiv(printpage) { 
@@ -78,4 +78,4 @@
 				//echo "<p>Back to Home Page in 1 seconds...</p>";
                 //echo "<a href='index.php'>Back to Homepage immdiately</a>";
 		    }	
-        ?>	
+        ?>

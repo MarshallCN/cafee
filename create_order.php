@@ -5,9 +5,9 @@
 	$sql_cusinfo = "SELECT customer_id,CONCAT(firstname,' ',lastname) FROM customer_info ORDER BY firstname, lastname;";
 	$result_cusinfo = $mysql->query($sql_cusinfo);
 ?>
-		<form action='index.php?page=create_order' method ='post'>
+		<form id='order_table' action='index.php?page=create_order' method ='post'>
 			<div class='big'><b>Customer:</b>
-				<select name='cus_id' id='cus' class='width-6'>
+				<select name='cus_id' id='cus'>
 					<option value=''>--</option>
 					<?php 
 					while($row = $mysql->fetch($result_cusinfo)) {
@@ -15,8 +15,26 @@
 					}?>
 				</select>
 			</div>
+<script>
+function reset(text) {  
+       if (confirm(text)) {  
+             alert("Reset OK");  
+			 document.getElementById("order_table").reset()
+         }  
+    }  
+</script>
+			<nav>
+			<ul>
+				<li><a>CreateOpt</a>
+					<ul>
+						<li><a onclick='document.getElementById("order_table").submit()'>Create</a></li>
+						<li><a onclick='reset("Do you want to reset this order?");'>Reset</a></li>
+					</ul>
+				</li>
+			</ul>
+			</nav>
 			<div class='create_order'>
-			<table class ='table-stripped'>
+				<table class ='table-stripped'>
 	<?php
 		while($row_fcata = $mysql->fetch($result_fcata)) {
 			$cata_id = $row_fcata['catalog_id']; 
@@ -49,19 +67,13 @@
             }
 		}
 	?>	
-			</table><br/><blocks cols='2'>
-			<div>
-				<button type='reset' outline>Reset</button>
-			</div>
-			<div class='text-right'>
-				<button id='creare_order' type='primary' name='create'>Create</button>
-			</div>
-		</form></blocks>
+			</table><br/><span id='end'/>
+		</form>
 </div>
 <div id='create_page'>
-	<?php
-		include 'create_order_page.php';
-	?>
+	<?php require 'create_order_page.php';?>
 </div>
+
+
 
 
