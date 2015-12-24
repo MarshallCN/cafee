@@ -37,15 +37,9 @@
 					echo "<a href=#Beverage>Beverage</a><br/>";
 					echo "<a href=#Milkshakes>Milkshakes</a><br/>";
 					echo "<a href=#Special>Special</a><br/>";
-					if ($page == 'create_order'){
-						echo "<a href=#end><img src='img/down.png'/></a>";
-					}else{
-						echo "<a href=#bottom><img src='img/down.png'/></a>";
-					}
-				}else{
-					echo "<a href=#bottom><img src='img/down.png'/></a>";
 				}
-				 ?>
+				?>
+				<a href=#bottom><img src='img/down.png'/></a>
 			</div>
 		</div>
 	    <div class='body'>

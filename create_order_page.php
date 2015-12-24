@@ -72,10 +72,5 @@
 				$_SESSION['totalp'] = $totalp;
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];
-            }else{
-				//header("refresh:1;url='index.php?order_new='");
-                echo "<div class='forms'><fieldset class='alert alert-error'><legend class='fat'>You Ordered Nothing</legend></fieldset></div>";
-				//echo "<p>Back to Home Page in 1 seconds...</p>";
-                //echo "<a href='index.php'>Back to Homepage immdiately</a>";
-		    }	
+            }
         ?>

@@ -54,6 +54,13 @@
 .left_tab img{
 	width: 80px;
 	height: 40px;
+	border-radius: 25px;
+}
+.left_tab img:hover{
+	background: #e21325;
+	opacity: 0.75;
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
 }
 .create_order{
 	float:left;
@@ -62,9 +69,9 @@
 #create_page{
 	width: 40%;
 	float:right;
-	margin-left: 50%;
-	margin-top: -30px;
-	position: fixed;
+	margin-top: -90px;
+	/*margin-left: 50%;
+	position: fixed;*/
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -79,6 +86,7 @@ input[type="number"]{-moz-appearance:textfield;}
 .bnum{
 	font-size: 26px;
 	font-family:Georgia,Times;
+	visibility: hidden;
 }
 /*DROPDOWN MENU*/
 nav {
@@ -110,6 +118,7 @@ nav ul {
     }
         nav ul li:hover {
             background: #2f77ee;
+			
         }
             nav ul li:hover a {
                 color: #fff;
@@ -133,4 +142,5 @@ nav ul {
             }   
                 nav ul ul li a:hover {
                     background: #2f77ff;
+					
                 }
