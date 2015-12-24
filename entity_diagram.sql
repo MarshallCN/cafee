@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 2015-12-23 14:34:25
+-- Generation Time: 2015-12-24 11:44:50
 -- 服务器版本： 5.6.24
 -- PHP Version: 5.6.8
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `customer_info` (
   `Tel` varchar(20) DEFAULT NULL,
   `Birthdate` date DEFAULT NULL,
   `Address` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 
 --
 -- 转存表中的数据 `customer_info`
@@ -54,7 +54,8 @@ INSERT INTO `customer_info` (`cus_number`, `Customer_ID`, `FirstName`, `LastName
 (11, '150011', 'Michal', 'Li', '', '0000-00-00', ''),
 (12, '150012', '4', '???2', '3', '0002-03-03', '2'),
 (13, '150013', '', '342', '3423', '0000-00-00', ''),
-(14, '150014', '', '343342', 'fesfrwr32', '0000-00-00', '');
+(14, '150014', '', '343342', 'fesfrwr32', '0000-00-00', ''),
+(15, '0', NULL, 'Unknown', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -137,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `customer_id` varchar(6) DEFAULT NULL,
   `Date` date DEFAULT NULL,
   `Time` time DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 
 --
 -- 转存表中的数据 `orders`
@@ -162,7 +163,10 @@ INSERT INTO `orders` (`order_id`, `customer_id`, `Date`, `Time`) VALUES
 (35, '150010', '2015-12-23', '18:48:54'),
 (36, '150014', '2015-12-23', '18:50:24'),
 (37, '150014', '2015-12-23', '19:01:52'),
-(38, '150006', '2015-12-23', '21:27:50');
+(38, '150006', '2015-12-23', '21:27:50'),
+(39, '150006', '2015-12-24', '18:37:03'),
+(40, '0', '2015-12-24', '18:41:01'),
+(41, '0', '2015-12-24', '18:43:01');
 
 -- --------------------------------------------------------
 
@@ -175,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `order_food` (
   `order_id` int(10) unsigned DEFAULT NULL,
   `food_id` int(10) unsigned DEFAULT NULL,
   `Quantity` int(11) DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
 
 --
 -- 转存表中的数据 `order_food`
@@ -216,7 +220,12 @@ INSERT INTO `order_food` (`item_id`, `order_id`, `food_id`, `Quantity`) VALUES
 (58, 35, 12, 1),
 (59, 36, 11, 1),
 (60, 37, 11, 1),
-(62, 38, 12, 1);
+(62, 38, 12, 1),
+(63, 39, 11, 2),
+(64, 39, 12, 1),
+(65, 40, 12, 2),
+(66, 40, 13, 2),
+(67, 41, 11, 1);
 
 --
 -- Indexes for dumped tables
@@ -254,7 +263,7 @@ ALTER TABLE `order_food`
 -- AUTO_INCREMENT for table `customer_info`
 --
 ALTER TABLE `customer_info`
-  MODIFY `cus_number` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `cus_number` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `food_catalogue`
 --
@@ -264,12 +273,12 @@ ALTER TABLE `food_catalogue`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+  MODIFY `order_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT for table `order_food`
 --
 ALTER TABLE `order_food`
-  MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
+  MODIFY `item_id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=68;
 --
 -- 限制导出的表
 --

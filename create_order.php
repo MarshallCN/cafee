@@ -8,7 +8,7 @@
 		<form id='order_table' action='index.php?page=create_order' method ='post'>
 			<div class='big'><b>Customer:</b>
 				<select name='cus_id' id='cus'>
-					<option value=''>--</option>
+					<option value='0'>--</option>
 					<?php 
 					while($row = $mysql->fetch($result_cusinfo)) {
 						echo "<option value=$row[0]>$row[1] @$row[0]</option>";
