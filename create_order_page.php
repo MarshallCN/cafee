@@ -1,4 +1,5 @@
 		<?php
+			date_default_timezone_set('PRC'); 
             $sql_foodinfo = "select s.food_id,s.cata_name as food_name,s.price,p.cata_name from food_catalogue as s join food_catalogue as p where p.food_id = s.catalog_id and  s.food_id != s.catalog_id;";
             $result = $mysql->query($sql_foodinfo);
             $food_cata_info = array();
@@ -69,7 +70,6 @@
 				</div>
 				</blocks></form>
 		    <?php
-				session_start();
 				$_SESSION['totalp'] = $totalp;
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];
