@@ -70,8 +70,8 @@
 	width: 40%;
 	float:right;
 	margin-top: -90px;
-	margin-left: 50%;
-	position: fixed;
+	/*margin-left: 50%;
+	position: fixed;*/
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -115,9 +115,7 @@ input[type="number"]{-moz-appearance:textfield;}
 }
 #egg{
 	margin-top: 950px;
-	width: 150px;
-
-	
+	width: 80px;
 }
 /*DROPDOWN MENU*/
 nav {

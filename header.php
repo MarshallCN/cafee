@@ -42,7 +42,7 @@
 				<a href=#bottom><img src='img/down.png'/></a>
 			</div>
 			<?php
-				if ($page == 'create_order'|| $page == 'food_sold') {
+				if ($page == 'create_order') {
 					echo "<img id='egg' onclick='xmaas()' src='img/egg.png'/>";
 				}
 			?>
@@ -59,6 +59,7 @@
 		document.getElementById("xmas").style.display = "none";
 		document.getElementById("tree").style.display = "none";
 		document.getElementById("bgd").style.display = "none";
+		document.getElementById("egg").style.display = "none";
 	}	
 </script>
 		<div class='body'>
