@@ -41,7 +41,29 @@
 				?>
 				<a href=#bottom><img src='img/down.png'/></a>
 			</div>
+			<?php
+				if ($page == 'create_order'|| $page == 'food_sold') {
+					echo "<img id='egg' onclick='xmaas()' src='img/egg.png'/>";
+				}
+			?>
 		</div>
-	    <div class='body'>
+<script>
+	function xmaas(){
+		if (confirm("Merry Christmas")){
+			 document.getElementById("xmas").style.display = "inline";
+			 document.getElementById("tree").style.display = "inline";
+			 document.getElementById("bgd").style.display = "inline";
+		}
+	}
+	function closex(){
+		document.getElementById("xmas").style.display = "none";
+		document.getElementById("tree").style.display = "none";
+		document.getElementById("bgd").style.display = "none";
+	}	
+</script>
+		<div class='body'>
+		<div id='bgd' onclick='close1()'></div>
+		<img id='tree' src='img/tree.png' onclick='closex()'/>
+		<img id='xmas' src='img/xmas.gif' onclick='closex()'/>
             <row>
                 <column cols="12">		

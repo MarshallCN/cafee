@@ -70,8 +70,8 @@
 	width: 40%;
 	float:right;
 	margin-top: -90px;
-	/*margin-left: 50%;
-	position: fixed;*/
+	margin-left: 50%;
+	position: fixed;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{
@@ -92,17 +92,17 @@ input[type="number"]{-moz-appearance:textfield;}
 	position: fixed;
 	height: 650px;
 	z-index: 2;
-	margin-left: -250px;
+	margin-left: 100px;
 	margin-top: -50px;
 	display:none;
 }
 #xmas{
 	position: fixed;
 	z-index: 2;
-	margin-left: 150px;
+	margin-left: 500px;
 	display:none;
 }
-#bgg{
+#bgd{
 	background: grey;
 	opacity: 0.4;
 	z-index: 1;
@@ -112,6 +112,12 @@ input[type="number"]{-moz-appearance:textfield;}
 	width: 1000%;
 	height: 1000%;
 	display:none;
+}
+#egg{
+	margin-top: 950px;
+	width: 150px;
+
+	
 }
 /*DROPDOWN MENU*/
 nav {

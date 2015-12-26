@@ -14,9 +14,6 @@
 						echo "<option value=$row[0]>$row[1] @$row[0]</option>";
 					}?>
 				</select>
-					<div id='bgg' onclick='close1()'></div>
-					<img id='tree' src='img/tree.png' onclick='close1()'/>
-					<img id='xmas' src='img/xmas.gif' onclick='close1()'/>
 			</div>
 <script>
 	function reset(text) {  
@@ -24,27 +21,14 @@
              alert("Reset OK");  
 			 document.getElementById("order_table").reset();
          }  
-    }  
-	function xmas1(){
-		if (confirm("Merry Christmas")){
-			  document.getElementById("xmas").style.display = "inline";
-			 document.getElementById("tree").style.display = "inline";
-			 document.getElementById("bgg").style.display = "inline";
-		}
-	}
-	function close1(){
-		document.getElementById("xmas").style.display = "none";
-			 document.getElementById("tree").style.display = "none";
-			 document.getElementById("bgg").style.display = "none";
-	}	
+    }  	
 </script>
 			<nav>
 			<ul>
-				<li><a onclick='document.getElementById("order_table").submit()'>CreateOpt</a>
+				<li><a>CreateOpt</a>
 					<ul>
 						<li><a onclick='document.getElementById("order_table").submit()'>Create</a></li>
 						<li><a onclick='reset("Do you want to reset this order?")'>Reset</a></li>
-						<li><a onclick='xmas1()'>Xmas</a></li>
 					</ul>
 				</li>
 			</ul>
