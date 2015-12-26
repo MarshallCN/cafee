@@ -14,7 +14,7 @@ $all = '';
 $today ="where date =(current_date())";
 $in7day = "where DATE_SUB(CURDATE(), INTERVAL 7 DAY) <= date";
 $thismonth = "where month(date) = month(now())";
-$thisweek = "where week(date,1) = week(now())";
+$thisweek = "where week(date,0) = week(now())";
 $thishour = "where hour(time) = hour(now()) and date =(current_date())";
 if(isset($_POST['timestamp'])){
 	$condition = $$_POST['timestamp'];

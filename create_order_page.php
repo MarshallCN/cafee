@@ -8,7 +8,8 @@
 	            $food_cata_info['name'][$row['food_id']] = $row['food_name'];
 	            $food_cata_info['price'][$row['food_id']] = $row['price'];
 	            $food_cata_info['cata'][$row['food_id']] = $row['cata_name'];
-            }$datetime = date('m-d-y h:i:s',time());
+            }
+			$datetime = date('m-d-y h:i:s',time());
             echo "<th colspan='4'><span style='font-size: 26px;'>New Order</span> $datetime</th>";
             echo "<tr class='bold'><td>Food Type</td><td>Food Name</td><td>Price</td><td>Quantity</td></tr>"; 
 		    $totalid = $mysql->fetch($mysql->query('select count(*) from food_catalogue;'))[0];

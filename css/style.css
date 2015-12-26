@@ -88,6 +88,31 @@ input[type="number"]{-moz-appearance:textfield;}
 	font-family:Georgia,Times;
 	visibility: hidden;
 }
+#tree{
+	position: fixed;
+	height: 650px;
+	z-index: 2;
+	margin-left: -250px;
+	margin-top: -50px;
+	display:none;
+}
+#xmas{
+	position: fixed;
+	z-index: 2;
+	margin-left: 150px;
+	display:none;
+}
+#bgg{
+	background: grey;
+	opacity: 0.4;
+	z-index: 1;
+	margin-left:-500px;
+	margin-top:-100px;
+	position: fixed;
+	width: 1000%;
+	height: 1000%;
+	display:none;
+}
 /*DROPDOWN MENU*/
 nav {
     margin: -50px 400px;
