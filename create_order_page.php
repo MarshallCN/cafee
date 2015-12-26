@@ -69,7 +69,6 @@
 				</div>
 				</blocks></form>
 		    <?php
-				session_start();
 				$_SESSION['totalp'] = $totalp;
 		        $_SESSION['cres'] = $create_res;
 		        $_SESSION['cus_id']= $_POST['cus_id'];

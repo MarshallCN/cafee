@@ -9,7 +9,7 @@
         <row centered>
         <column cols="6">
         <?php
-		    require "db.php";
+		    include "db.php";
             session_start();	
             if(isset($_SESSION['totalp'])){
 	            $create_res = $_SESSION['cres'];
@@ -37,7 +37,6 @@
             }
             echo "<p>Back to Home Page in 1 seconds...</p>";
             echo "<a href='index.php'>Back to Homepage immdiately</a></fieldset></div>";
-            session_unset();
         ?>
         </column>
         </row>
