@@ -1,5 +1,5 @@
 <?php
-	//error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
+	error_reporting(E_ALL^E_NOTICE^E_WARNING^E_DEPRECATED);
 	session_start();
 	$sql_fcata = "select catalog_id,cata_name from food_catalogue where food_id = catalog_id;";
 	$result_fcata = $mysql->query($sql_fcata);
