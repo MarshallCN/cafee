@@ -17,7 +17,6 @@
 				</select>
 				<button id='createbtn' type='primary'>Create New</button>
 			</div>
-			
 			<div class='create_order'>
 				<table class ='table-stripped'>
 	<?php

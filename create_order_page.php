@@ -46,6 +46,7 @@
 	         	echo "<tr><td colspan='1' class='bold'>Address</td><td colspan='3'>".$row[4]."</td></tr></table>";
 	          	?>
 				<script language="javascript"> 
+					document.getElementById('createbtn').style.display= "none";
 					function printdiv(printpage) { 
 						var headstr = "<html><head><title></title></head><body>"; 
 						var footstr = "</body>"; 
