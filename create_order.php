@@ -15,25 +15,9 @@
 						echo "<option value=$row[0]>$row[1] @$row[0]</option>";
 					}?>
 				</select>
+				<button id='createbtn' type='primary'>Create New</button>
 			</div>
-<script>
-	function reset(text) {  
-       if (confirm(text)) {  
-             alert("Reset OK");  
-			 document.getElementById("order_table").reset();
-         }  
-    }  	
-</script>
-			<nav>
-			<ul>
-				<li><a>CreateOpt</a>
-					<ul>
-						<li><a onclick='document.getElementById("order_table").submit()'>Create</a></li>
-						<li><a onclick='reset("Do you want to reset this order?")'>Reset</a></li>
-					</ul>
-				</li>
-			</ul>
-			</nav>
+			
 			<div class='create_order'>
 				<table class ='table-stripped'>
 	<?php
