@@ -5,21 +5,38 @@
         <link type="text/css" rel="stylesheet" href="css/kube.css"/>
     </head>
     <body>
-	    <center id="tab_out">
-	    <div class="tab">
+	    <center class="tab_out">
             <table class="table-stripped">
-		        <tr><td class='text-centered' class='tab_in'>
-                <button type="submit" onclick="window.location.href='index.php?page=food_cata'">Food catalogue</button>
-                <button type="submit" onclick="window.location.href='index.php?page=food_detail'">Food Detail</button>
-                <button type="submit" onclick="window.location.href='index.php?page=order_info'">All Orders</button>
-                <button type="submit" onclick="window.location.href='index.php?page=order_detail'">Orders Detail</button>
-                <button type="submit" onclick="window.location.href='index.php?page=food_sold'">Food Sold Info</button>
-                <button type="submit" onclick="window.location.href='index.php?page=customer_info'">Customer Info</button>
-		        <button id='customer' type="primary" onclick="window.location.href='index.php?page=new_customer'" outline>New Customer</button>
-		        <button id='create' type="primary" onclick="window.location.href='index.php?page=create_order'">Create Order</button></td>
+		        <tr><td class='text-centered' id='tab'>
+				<nav>
+					<ul>
+						<li><a>Food Info</a>
+							<ul>
+								<li><a onclick="window.location.href='index.php?page=food_cata'">Food catalogue</a></li>
+								<li><a onclick="window.location.href='index.php?page=food_detail'">Food Detail</a></li>
+							</ul>
+						</li>
+						<li><a>Order Info</a>
+							<ul>
+								<li><a onclick="window.location.href='index.php?page=order_info'">All Orders</a></li>
+								<li><a onclick="window.location.href='index.php?page=order_detail'">Orders Detail</a></li>
+							</ul>
+						</li>
+						<li><a onclick="window.location.href='index.php?page=food_sold'">Food Sold Info</a></li>
+						<li><a onclick="window.location.href='index.php?page=customer_info'">Customer Info</a></li>
+					</ul>
+					<ul>
+						<li><a>Create</a>
+							<ul>
+								<li><a onclick="window.location.href='index.php?page=new_customer'">New Customer</a></li>
+								<li><a onclick="window.location.href='index.php?page=create_order'">New Order</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+					</td>
                 </tr>
 		    </table>
-	    </div>
 		</center>
 		<div class='left'>
 			<div class='left_tab'>
