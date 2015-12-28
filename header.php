@@ -44,7 +44,7 @@
 		</center>
 		<div class='left'>
 			<div class='left_tab'>
-				<a href=#tab_out><img src='img/up.png'/></a><br/>
+				<a href=#><img src='img/up.png'/></a><br/>
 				<?php
 				 if ($page == 'create_order'|| $page == 'food_sold') {
 					echo "<a href=#Sandwiches>Sandwiches</a><br/>";
