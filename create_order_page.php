@@ -40,7 +40,7 @@
 					}
 				}
 		        echo "<tr><td colspan='2' class='bold'>Total Price</td><td colspan='2' class='text-centered'>&#165;  ".$totalp."</td></tr>";
-		        echo "<tr><td colspan='1' class='bold'>Customer ID</td><td colspan='3'>".$row[0]."</td></tr>";
+		        //echo "<tr><td colspan='1' class='bold'>Customer ID</td><td colspan='3'>".$row[0]."</td></tr>";
 	          	echo "<tr><td colspan='1' class='bold'>Customer Name</td><td colspan='3'>".$row[1]." ".$row[2]."</td></tr>";
 	         	echo "<tr><td colspan='1' class='bold'>Phone Number</td><td colspan='3'>".$row[3]."</td></tr>";
 	         	echo "<tr><td colspan='1' class='bold'>Address</td><td colspan='3'>".$row[4]."</td></tr></table>";
@@ -64,17 +64,14 @@
 					}
 				</script> <!--<link href='' rel='stylesheet' media='all' />
 					<link href='' rel='stylesheet' media='print'/>-->
+					
 			<nav id='submitbtn'>
-			<ul>
-				<li><a onclick="printdiv('create_page');">Print</a></li>
-				<li><a onclick="document.getElementById('order_submit').submit();">Submit</a>
-					<ul>
-						<li><a onclick="document.getElementById('order_submit').submit();">Submit</a></li>
-						<li><a onclick ="history.back(-1);">Modify</a></li>
-						<li><a onclick ="reset();">Reset</a></li>
-					</ul>
-				</li>
-			</ul>
+				<ul>
+					<li><a onclick="document.getElementById('order_submit').submit();"><button type="primary">Submit</button></a>
+					<li><a onclick="printdiv('create_page');"><button>Print</button></a></li>
+					<li><a onclick ="history.back(-1);"><button outline>Modify</button></a></li>
+					<li><a onclick ="reset();"><button outline>Reset</button></a></li>
+				</ul>
 			</nav>
 			</form>
 		    <?php
