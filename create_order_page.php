@@ -39,7 +39,7 @@
 				    echo "<td>&#165;".$food_cata_info['price'][$f_id]."</td>";
                     echo "<td>".$f_quantity."</td></tr>";
 				    $create_res['food_id'][$itemcount] =$f_id;
-                    $create_res['quantity'][$itemcount]= $f_quantity;				
+                    $create_res['quantity'][$itemcount]= $f_quantity;
                     $totalp += $food_cata_info['price'][$f_id] * $f_quantity;
 				    $itemcount++;
 	            }
